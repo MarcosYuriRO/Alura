@@ -31,5 +31,6 @@ public class PrincipalComListas {
                 System.out.println(filme.getClassificacao());
             }
         }
+
     }
 }
