@@ -15,3 +15,4 @@ Projeto desenvolvido no quarto curso da formação Java da Alura
 - Conhecer o pacote java.io para manipulação de arquivos.
 
 //https://www.omdbapi.com/?t=filme&apikey=d1953970
+//Chave API: &apikey=d1953970
