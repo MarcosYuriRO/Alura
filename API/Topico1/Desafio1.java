@@ -11,13 +11,13 @@ public class Desafio1 {
         System.out.println("Digite o nome de um livro:");
         String busca = scanner.nextLine();
 
-        String endereco;
+        String endereco = "https://www.googleapis.com/books/v1/volumes?q=" + busca + "&key=AIzaSyD6udyh8su9dcz0wstLto7cF2pHBwrFkJk";
 
 
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(""))
+                .uri(URI.create(endereco))
                 .build();
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
@@ -26,4 +26,5 @@ public class Desafio1 {
     }
 }
 
+//https://www.googleapis.com/books/v1/volumes?q=search+terms
 //Chave API Google: AIzaSyD6udyh8su9dcz0wstLto7cF2pHBwrFkJk
