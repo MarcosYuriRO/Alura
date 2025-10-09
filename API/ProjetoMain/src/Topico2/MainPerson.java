@@ -7,7 +7,15 @@ import com.google.gson.GsonBuilder;
 public class MainPerson {
     public static void main(String[] args) {
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).setPrettyPrinting().create();
-        Person person = gson.fromJson("a", Person.class);
+
+        Person person = new Person("Joao", 40, "Pingamonhandapio");
+        String json = gson.toJson(person);
+        Person a = gson.fromJson(json, Person.class);
+
+        //Json:
+        System.out.println(json);
+
+        //Gson:
         System.out.println(person);
     }
 }
