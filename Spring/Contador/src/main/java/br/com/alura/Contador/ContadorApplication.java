@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.FileWriter;
 import java.util.Scanner;
 
 @SpringBootApplication
@@ -37,7 +38,8 @@ public class ContadorApplication implements CommandLineRunner {
 				</dependency>);
 				""");*/
 
-		//Desa
+		//Desafio 4:
+		FileWriter escrita = new FileWriter("tarefa.json");
 
 
 	}
