@@ -1,9 +1,11 @@
 package br.com.alura.Contador;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
@@ -39,7 +41,13 @@ public class ContadorApplication implements CommandLineRunner {
 				""");*/
 
 		//Desafio 4:
-		FileWriter escrita = new FileWriter("tarefa.json");
+		File file = new File("tarefa.json");
+		Tarefa tarefa = new Tarefa("abc", true, "Marcos");
+
+		tarefa.obterDados(tarefa.toString(), tarefa.getClass());
+
+
+
 
 
 	}
