@@ -43,11 +43,12 @@ public class PrincipalComBusca {
                         .send(request, HttpResponse.BodyHandlers.ofString());
 
                 String json = response.body();
-                System.out.println(json);
+                System.out.println("Json" + json);
 
                 //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
                 TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-                System.out.println(meuTituloOmdb);
+                //fromJson: transforma um json em objeto através do gson
+                System.out.println("Gson:" + meuTituloOmdb);
                 //try {
                 Titulo meuTitulo = new Titulo(meuTituloOmdb);
                 System.out.println("Título já convertido:");
@@ -67,6 +68,7 @@ public class PrincipalComBusca {
 
         FileWriter escrita = new FileWriter("API/ProjetoMain/filmes.json");
         escrita.write(gson.toJson(titulos));
+        //toJson: transforma um objeto em um formato json
         escrita.close();
         System.out.println("O programa finalizou corretamente.");
 
