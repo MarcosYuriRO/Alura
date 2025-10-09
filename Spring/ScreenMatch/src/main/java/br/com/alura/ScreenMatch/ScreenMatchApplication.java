@@ -1,5 +1,6 @@
 package br.com.alura.ScreenMatch;
 
+import br.com.alura.ScreenMatch.model.DadosEpisodio;
 import br.com.alura.ScreenMatch.model.DadosSerie;
 import br.com.alura.ScreenMatch.service.ConsumoAPI;
 import br.com.alura.ScreenMatch.service.ConverteDados;
@@ -24,5 +25,7 @@ public class ScreenMatchApplication implements CommandLineRunner {
 		//Coloca como parâmetros do DadosSerie, dados obtidos do json da serie, conseguidos através do ConverteDados
 		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
 		System.out.println(dados);
+
+		DadosEpisodio dadosEpisodio = conversor.obterDados(json, DadosEpisodio.class);
 	}
 }
