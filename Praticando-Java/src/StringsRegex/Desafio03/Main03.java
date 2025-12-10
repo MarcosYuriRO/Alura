@@ -10,7 +10,7 @@ public class Main03 {
         String fileName = scanner.nextLine();
 
         // \\..+$: \\. é a string com qualquer caractere. 
-        // O ponto depois, significa que ele pegará a parte da string a partir de o ponto (.), até o resto final da string ($).
+        // O ponto depois, significa que ele pegará a parte da string a partir do ponto (.), até o resto final da string ($).
         // + pega um ou mais caracteres antes do final da string.
         // * pega 0 ou mais caracteres antes do final da string.
         System.out.println("Nome do arquivo sem extensão: " + fileName.replaceAll("\\..+$", ""));
