@@ -24,9 +24,9 @@ public class OperacaoSaque implements Runnable{
         System.out.println("Finalizando operação de saque.");
     }
 
-	@Override
-	public void run() {
-		executa();
-		System.out.println(Thread.currentThread().getName());
-	}
+    @Override
+    public void run() {
+        executa();
+        System.out.println(Thread.currentThread().getName());
+    }
 }
